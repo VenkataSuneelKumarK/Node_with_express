@@ -1,0 +1,30 @@
+<%- include('../includes/head') %>
+<body>
+    <%- include('../includes/navigation') %>
+    <main>
+        <% if(orders.length){ %>
+            <h1>My Orders</h1>
+            <div class="grid">
+                <% for(let order of orders){%>
+                    <article class="card product-itemsd">
+                        <header class="card__header">
+                            <h1 class="product__title">
+                                <%=order.title%>
+                            </h1>
+                        </header>
+                        <div class="card_content">
+                            <h2 class="product__price"> 123
+                            </h2>
+                            <p class="product__description">
+                                ahskhfksjkbfdbsjkkskjdkbsbdjkskjksjbjkbf
+                            </p>
+                        </div>
+                    </article>
+                <%}%>
+            </div>
+        <%} else{%>
+            <h3>No Products to buy</h3>
+        <%}%>
+    </main>
+</body>
+</html>
